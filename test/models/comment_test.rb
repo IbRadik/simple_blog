@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
@@ -11,7 +13,7 @@ class CommentTest < ActiveSupport::TestCase
   end
 
   test 'invalid comment without article' do
-    comment =  Comment.new(commenter: 'Alex', body: 'Body text')
+    comment = Comment.new(commenter: 'Alex', body: 'Body text')
     assert comment.invalid?
   end
 end
